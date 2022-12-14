@@ -1,0 +1,22 @@
+.navbar-espace-glisse {
+  justify-content: space-between;
+  background: $light-grey;
+}
+
+.navbar-espace-glisse .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-espace-glisse .navbar-brand img {
+  width: 50px;
+}
+
+.navbar-espace-glisse .nav-link {
+  color: $black !important;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.navbar-espace-glisse a:hover {
+  color: $middle-blue !important;
+}
