@@ -1,13 +1,11 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-espace-glisse px-4 py-3">
   <div class="container-fluid">
-    <%= link_to "main/index", class: "navbar-brand px-4" do %>
+    <%= link_to :root, class: "navbar-brand px-4" do %>
       <%= image_tag "https://res.cloudinary.com/dey9mpa39/image/upload/v1671033389/espace%20glisse/logo_yyrq5q.png", class: "rounded-3" %>
     <% end %>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
@@ -15,10 +13,10 @@
             <%= link_to "notre vocation", "#", class: "nav-link" %>
           </li>
           <li class="nav-item px-5">
-            <%= link_to "écoles", "#", class: "nav-link" %>
+            <%= link_to "cours", "#", class: "nav-link" %>
           </li>
           <li class="nav-item px-5">
-            <%= link_to "cours", "#", class: "nav-link" %>
+            <%= link_to "écoles", "#", class: "nav-link" %>
           </li>
          <li class="nav-item px-5">
             <%= link_to "spots", "#", class: "nav-link" %>
