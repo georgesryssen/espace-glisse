@@ -1,0 +1,7 @@
+<div class="container">
+  <h1 class="mt-4 text-center">Liste des cours</h1>
+  <p class="text-center my-5"><%= link_to "Ajouter un cours", new_lesson_path, class: "btn btn-grey" %></p>
+  <% @lessons.each do |lesson| %>
+    <%= render "shared/lesson-card-index", lesson: lesson %>
+  <% end %>
+</div>

@@ -1,0 +1,9 @@
+<%= simple_form_for school do |f| %>
+  <%= f.input :name, label: "Ecole", placeholder: "Nom de mon école" %>
+  <%= f.input :phone, label: "Téléphone", placeholder: "Téléphone fixe ou portable" %>
+  <%= f.input :address, label: "Adresse", placeholder: "Addresse de l'école" %>
+  <%= f.input :description, label: "Présentation", placeholder: "Présentez votre école en quelques lignes", as: :text, input_html: { 'rows' => 5, 'cols' => 10 } %>
+  <%= f.input :opening, label: "Ouverture", placeholder: "toute l'année / été / hiver" %>
+  <%= f.input :photo, label: "Logo", as: :file %>
+  <%= f.submit class: 'btn btn-flat' %>
+<% end %>

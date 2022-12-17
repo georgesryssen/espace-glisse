@@ -36,6 +36,9 @@ gem "font-awesome-sass", "~> 6.1"
 # Powerful components to create your forms
 gem "simple_form", github: "heartcombo/simple_form"
 
+# Map
+gem "geocoder"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
