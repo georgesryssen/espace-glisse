@@ -15,7 +15,7 @@
 .btn-flat {
   color: white;
   font-weight: 500;
-  padding: 8px 24px;
+  padding: 8px 20px;
   border-radius: 4px;
   background: $middle-blue;
   transition: background 0.3s ease;
@@ -25,6 +25,23 @@
   background: $vlight-blue;
   color: $middle-blue;
   font-weight: bold;
+  border: 1px solid #0F60C4;
+}
+
+.btn-grey {
+  color: white;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 4px;
+  background: $dark-grey;
+  transition: background 0.3s ease;
+}
+
+.btn-grey:hover {
+  background: $vlight-blue;
+  color: $dark-grey;
+  font-weight: bold;
+  border: 1px solid $dark-grey;
 }
 
 .btn-gradient {

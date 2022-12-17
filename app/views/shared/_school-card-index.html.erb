@@ -1,0 +1,9 @@
+<div class="card mt-4 p-3">
+  <h3 class="mb-4"><%= school.name %></h3>
+  <p><b>Téléphone : </b><%= school.phone %></p>
+  <p><b>Adresse : </b><%= school.address %></p>
+  <p><b>Présentation : </b><%= school.description %></p>
+  <p><b>Ouverture : </b><%= school.opening %></p>
+  <p><b>Notations : </b><%= school.rating %></p>
+  <p><%= link_to "En savoir plus", school_path(school), class: "btn btn-flat" %></p>
+</div>

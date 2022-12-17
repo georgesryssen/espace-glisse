@@ -1,0 +1,9 @@
+<div class="card mt-4 p-3">
+  <h3 class="mb-4"><%= lesson.name %></h3>
+  <p><b>Category : </b><%= lesson.category.name %></p>
+  <p><b>Date : </b><%= lesson.date %></p>
+  <p><b>Ecole : </b><%= lesson.school.name %></p>
+  <p><b>Spot : </b><%#= lesson.spot.name %></p>
+  <p><b>Niveau : </b><%= lesson.level %></p>
+  <p><%= link_to "En savoir plus", lesson_path(lesson), class: "btn btn-flat" %></p>
+</div>
