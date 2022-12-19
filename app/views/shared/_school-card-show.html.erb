@@ -6,5 +6,5 @@
   <p><b>Ouverture : </b><%= school.opening %></p>
   <p><b>Notations : </b><%= school.rating %></p>
   <p><%= link_to "Modifier", edit_school_path(school), class: "btn btn-flat float-end" %></p>
-  <p><%= link_to "Supprimer", school_path(@school), class: "btn btn-grey float-end", data: { turbo_method: :delete, turbo_confirm: "Êtes vous sûr?" } %></p>
+  <p><%= link_to "Supprimer", school_path(school), class: "btn btn-grey float-end", data: { turbo_method: :delete, turbo_confirm: "Êtes vous sûr?" } %></p>
 </div>

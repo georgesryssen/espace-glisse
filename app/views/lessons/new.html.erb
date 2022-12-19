@@ -1,1 +1,10 @@
-<div class="container">Hello</div>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3 class="text-center mb-5">Ajouter un nouveau cours</h3>
+        <%= render "shared/lesson-form", lesson: @lesson %>
+      </div>
+    </div>
+  </div>
+</div>

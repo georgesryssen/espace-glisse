@@ -5,5 +5,6 @@
   <p><b>Ecole : </b><%= lesson.school.name %></p>
   <p><b>Spot : </b><%= lesson.spot.name %></p>
   <p><b>Niveau : </b><%= lesson.level %></p>
-  <p><%= link_to "En savoir plus", lesson_path(lesson), class: "btn btn-flat" %></p>
+  <p><%= link_to "Modifier", edit_lesson_path(lesson), class: "btn btn-flat float-end" %></p>
+  <p><%= link_to "Supprimer", lesson_path(lesson), class: "btn btn-grey float-end", data: { turbo_method: :delete, turbo_confirm: "Êtes vous sûr?" } %></p>
 </div>
