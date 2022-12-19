@@ -5,5 +5,7 @@
   <%= f.input :description, label: "Présentation", placeholder: "Présentez votre école en quelques lignes", as: :text, input_html: { 'rows' => 5, 'cols' => 10 } %>
   <%= f.input :opening, label: "Ouverture", placeholder: "toute l'année / été / hiver" %>
   <%= f.input :photo, label: "Logo", as: :file %>
-  <%= f.submit class: 'btn btn-flat' %>
+  <div class="text-center">
+    <%= f.submit "Valider", class: 'btn btn-flat mt-3 text-center' %>
+  </div>
 <% end %>

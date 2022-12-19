@@ -13,25 +13,37 @@
             <%= link_to "notre vocation", "#", class: "nav-link" %>
           </li>
           <li class="nav-item px-5">
-            <%= link_to "cours", "#", class: "nav-link" %>
+            <%= link_to "cours", lessons_path, class: "nav-link" %>
           </li>
           <li class="nav-item px-5">
             <%= link_to "écoles", schools_path, class: "nav-link" %>
           </li>
          <li class="nav-item px-5">
-            <%= link_to "spots", "#", class: "nav-link" %>
+            <%= link_to "spots", spots_path, class: "nav-link" %>
           </li>
-          <li class="nav-item px-4 dropdown">
+          <li class="nav-item px-4 dropdown" role="button">
             <%= image_tag "https://res.cloudinary.com/dey9mpa39/image/upload/v1671041700/espace%20glisse/Photo_profil_Georges_Ryssen_GR_2020_zz_rnhfwg.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-end" role="button" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+              <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
         <% else %>
+          <li class="nav-item px-5 active">
+              <%= link_to "Vocation", "#", class: "nav-link" %>
+            </li>
+            <li class="nav-item px-5">
+              <%= link_to "Cours", lessons_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item px-5">
+              <%= link_to "Ecoles", schools_path, class: "nav-link" %>
+            </li>
           <li class="nav-item px-5">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+              <%= link_to "Spots", spots_path, class: "nav-link" %>
+            </li>
+          <li class="nav-item px-5">
+            <%= link_to "Se connecter", new_user_session_path, class: "nav-link" %>
           </li>
         <% end %>
       </ul>

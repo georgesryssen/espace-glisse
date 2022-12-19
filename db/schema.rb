@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_17_104034) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_19_151828) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,7 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_17_104034) do
 
   create_table "lessons", force: :cascade do |t|
     t.string "name"
-    t.date "date"
+    t.datetime "date", precision: nil
     t.float "duration"
     t.string "level"
     t.bigint "school_id", null: false
@@ -77,8 +77,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_17_104034) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "phone"
+    t.string "address"
+    t.boolean "teacher"
+    t.bigint "school_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["school_id"], name: "index_users_on_school_id"
   end
 
   add_foreign_key "bookings", "lessons"
@@ -86,4 +93,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_17_104034) do
   add_foreign_key "lessons", "categories"
   add_foreign_key "lessons", "schools"
   add_foreign_key "lessons", "spots"
+  add_foreign_key "users", "schools"
 end
