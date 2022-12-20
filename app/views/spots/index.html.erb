@@ -1,0 +1,7 @@
+<div class="container">
+  <h1 class="mt-4 text-center">Liste des spots</h1>
+  <p class="text-center my-5"><%= link_to "Ajouter un spot", new_spot_path, class: "btn btn-grey" %></p>
+  <% @spots.each do |spot| %>
+    <%= render "shared/spot-card-index", spot: spot %>
+  <% end %>
+</div>

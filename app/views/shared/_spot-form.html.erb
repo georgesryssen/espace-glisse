@@ -1,0 +1,10 @@
+<%= simple_form_for spot do |f| %>
+  <%= f.input :name, label: "Nom" %>
+  <%= f.input :level, label: "Niveau" %>
+  <%= f.input :town, label: "Ville" %>
+  <%= f.input :latitude, label: "Latitude" %>
+  <%= f.input :longitude, label: "Longitude" %>
+  <div class="text-center">
+    <%= f.submit "Ajouter ce spot", class: 'mt-3 btn btn-flat' %>
+  </div>
+<% end %>

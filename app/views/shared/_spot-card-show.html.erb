@@ -1,0 +1,9 @@
+<div class="card mt-4 p-3 rounded shadow-sm">
+  <h3 class="mb-4"><%= spot.name %></h3>
+  <%# begin // <p><b>Category : </b><%= spot.category.name</p> %>
+  <p><b>Niveau : </b><%= spot.level %></p>
+  <p><b>Ville : </b><%= spot.town %></p>
+  <p><b>Coordonnées : </b> latitude : <%= spot.latitude %>, longitude : <%= spot.longitude %></p>
+  <p><%= link_to "Modifier", edit_spot_path(spot), class: "btn btn-flat float-end" %></p>
+  <p><%= link_to "Supprimer", spot_path(spot), class: "btn btn-grey float-end", data: { turbo_method: :delete, turbo_confirm: "Êtes vous sûr?" } %></p>
+</div>
